@@ -12,18 +12,18 @@
 //     }
 // })
 
-particlesJS.load('particles-js-1', '/assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
-particlesJS.load('pjs-3', '/assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
-particlesJS.load('pjs-4', '/assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
-particlesJS.load('particles-js-2', '/assets/particles-2.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
+particlesJS.load("particles-js-1", "./assets/particles.json", function () {
+  console.log("callback - particles.js config loaded");
+});
+particlesJS.load("pjs-3", "./assets/particles.json", function () {
+  console.log("callback - particles.js config loaded");
+});
+particlesJS.load("pjs-4", "./assets/particles.json", function () {
+  console.log("callback - particles.js config loaded");
+});
+particlesJS.load("particles-js-2", "./assets/particles-2.json", function () {
+  console.log("callback - particles.js config loaded");
+});
 
 
 const asixNav = document.querySelector('.asix-nav')
