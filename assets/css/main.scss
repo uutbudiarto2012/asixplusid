@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Macondo&family=Titillium+Web:wght@400;600;700;900&display=swap");
 body {
-//   background-image: url('/assets/images/bg.png'), linear-gradient(#000,#FFF);
-  // background-size: cover;
-  // background-attachment: fixed;
-  // background-position: left;
+  background-image: url('/assets/images/bg-press.png'), linear-gradient(#000,transparent);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left;
   background-color: #000;
   font-family: "Titillium Web", sans-serif;
 }
@@ -20,6 +20,9 @@ body {
   padding: 15px 0;
   transition: all ease-in-out 0.5s;
   font-weight: 700;
+  .nav-logo{
+    width: 45px;
+  }
   &.isTop {
     box-shadow: 0 3px 3px rgba(108, 7, 111, 0.9);
     top: 0;
@@ -206,11 +209,10 @@ body {
 .video-demo {
   position: relative;
   z-index: 30;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-//   background-image: url('../images/bg.png');
   background-size: cover;
   background-position: right;
   .bg-top {
@@ -313,14 +315,24 @@ body {
 
 .about {
   position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // height: 100vh;
+  padding-bottom: 15%;
+  // background-image: url('../images/bg-press.png');
+  // background-size: contain;
+  // background-repeat: repeat-y;
+
+  // background-image: linear-gradient(transparent,#000,#000,#000,transparent,#000,#000,#000,transparent);
   .bg-top {
-    position: absolute;
     top: -15%;
+    position: absolute;
     width: 100%;
     z-index: 60;
+  }
+  .bg-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
   }
   h2{
       color: #FFE;
@@ -380,11 +392,14 @@ body {
     position: relative;
     .pjs-cader{
         position: absolute;
-        left: 10%;
-        right: 10%;
-        top: 10%;
-        bottom: 10%;
+        left: 20%;
+        right: 20%;
+        top: 20%;
+        bottom: 20%;
         overflow: hidden;
+        border-radius: 50%
+        // height: 100px;
+        // width: 100px;
     }
     .cader {
       width: 100%;
@@ -397,9 +412,10 @@ body {
         align-items: center;
         justify-content: center;
         padding: 10px;
-        border-radius: 30px;
+        border-radius: 50%;
         height: 500px;
-        background-image: url('../../assets/images/cader.png');
+        overflow: hidden;
+        // background-image: url('../../assets/images/cader.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -412,12 +428,13 @@ body {
   .about-wrapper{
       position: relative;
       padding: 50px;
-      z-index: 2;
+      z-index: 20;
       &.top{
           display: flex;
           flex-direction: column;
           align-items: flex-end;
           justify-content: center;
+         
           p{
               text-align: end;
               margin: 20px 0;
@@ -457,15 +474,26 @@ body {
       }
     }
   }
+  @media (max-width:768px) {
+    .bg-top {
+      top: -5%;
+      position: absolute;
+      width: 100%;
+      z-index: 60;
+    }
+  }
 }
 
 .partner {
   position: relative;
   height: 100vh;
+  // background-image: linear-gradient(transparent,#000,#000,transparent);
+  background-image: url('../images/bg-press.png');
+  background-size: contain;
   .bg-top {
     position: absolute;
     object-fit: cover;
-    top: -10%;
+    top: -15%;
     width: 100%;
   }
   .bg-bottom {
@@ -474,6 +502,141 @@ body {
     bottom: 0;
     width: 100%;
   }
+  .parter-content{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    z-index: 20;
+    .header{
+      .title{
+        font-size: 20px;
+        font-weight: 700;
+        color: #FFF;
+        text-align: center;
+      }
+      .sub-title{
+        font-size: 32px;
+        font-weight: 700;
+        color: #FFF;
+        margin-bottom: 20px;
+      }
+    }
+    .link-partner{
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      background-color: #000;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #FFF;
+      font-weight: 700;
+      border-radius: 5px;
+      border: 2px solid #9e32e3;
+      transition: all ease-in-out .3s;
+      .logo{
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+        border-radius: 3px;
+      }
+      &:hover{
+        background-color: #FFF;
+        color: #9e32e3;
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .bg-top {
+      top: -5%;
+    }
+  }
+}
+
+.footer{
+  background-image: url('../images/bg-press.png');
+  position: relative;
+  background-color: #000;
+  background-size: 100%;
+  background-position: bottom;
+  background-attachment: fixed;
+  .footer-content{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .social{
+      background-color: #000;
+      box-shadow: 0 0 30px #9e32e3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+      width: 60px;
+      height: 60px;
+      img{
+        width: 30px;
+      }
+      
+      @media (max-width:768px) {
+        width: 50px;
+        height: 50px;
+        img{
+          width: 25px;
+        }
+      }
+    }
+  }
+  .main-footer{
+    .part{
+        display: flex;
+        flex-direction: column;
+        .part-title{
+          font-weight: 700;
+          color: #FFF;
+          margin-bottom: 20px;
+        }
+      a{
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+    .logo-footer{
+      display: flex;
+      justify-content: center;
+      img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .copyright{
+      color: #FFF;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  .bg-top {
+    position: absolute;
+    object-fit: cover;
+    top: -15%;
+    width: 100%;
+    z-index: 10;
+  }
+  .bg-bottom {
+    position: absolute;
+    object-fit: cover;
+    bottom: 0;
+    width: 100%;
+  }
+
+  
+
   @media (max-width: 768px) {
     .bg-top {
       top: -5%;

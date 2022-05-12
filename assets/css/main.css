@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Macondo&family=Titillium+Web:wght@400;600;700;900&display=swap");
 body {
+  background-image: url("/assets/images/bg-press.png"), -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent));
+  background-image: url("/assets/images/bg-press.png"), linear-gradient(#000, transparent);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left;
   background-color: #000;
   font-family: "Titillium Web", sans-serif;
 }
@@ -17,6 +22,10 @@ body {
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
   font-weight: 700;
+}
+
+.asix-nav .nav-logo {
+  width: 45px;
 }
 
 .asix-nav.isTop {
@@ -279,7 +288,7 @@ body {
 .video-demo {
   position: relative;
   z-index: 30;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,16 +427,21 @@ body {
 
 .about {
   position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-bottom: 15%;
 }
 
 .about .bg-top {
-  position: absolute;
   top: -15%;
+  position: absolute;
   width: 100%;
   z-index: 60;
+}
+
+.about .bg-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .about h2 {
@@ -513,11 +527,12 @@ body {
 
 .about .cader-wrapper .pjs-cader {
   position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 10%;
-  bottom: 10%;
+  left: 20%;
+  right: 20%;
+  top: 20%;
+  bottom: 20%;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 .about .cader-wrapper .cader {
@@ -538,9 +553,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px;
-  border-radius: 30px;
+  border-radius: 50%;
   height: 500px;
-  background-image: url("../../assets/images/cader.png");
+  overflow: hidden;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -554,7 +569,7 @@ body {
 .about .about-wrapper {
   position: relative;
   padding: 50px;
-  z-index: 2;
+  z-index: 20;
 }
 
 .about .about-wrapper.top {
@@ -643,16 +658,27 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .about .bg-top {
+    top: -5%;
+    position: absolute;
+    width: 100%;
+    z-index: 60;
+  }
+}
+
 .partner {
   position: relative;
   height: 100vh;
+  background-image: url("../images/bg-press.png");
+  background-size: contain;
 }
 
 .partner .bg-top {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
-  top: -10%;
+  top: -15%;
   width: 100%;
 }
 
@@ -664,8 +690,196 @@ body {
   width: 100%;
 }
 
+.partner .parter-content {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 20;
+}
+
+.partner .parter-content .header .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFF;
+  text-align: center;
+}
+
+.partner .parter-content .header .sub-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+.partner .parter-content .link-partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  background-color: #000;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 2px solid #9e32e3;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+}
+
+.partner .parter-content .link-partner .logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.partner .parter-content .link-partner:hover {
+  background-color: #FFF;
+  color: #9e32e3;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+          box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+}
+
 @media (max-width: 768px) {
   .partner .bg-top {
+    top: -5%;
+  }
+}
+
+.footer {
+  background-image: url("../images/bg-press.png");
+  position: relative;
+  background-color: #000;
+  background-size: 100%;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.footer .footer-content {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer-content .social {
+  background-color: #000;
+  -webkit-box-shadow: 0 0 30px #9e32e3;
+          box-shadow: 0 0 30px #9e32e3;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+}
+
+.footer .footer-content .social img {
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer .footer-content .social {
+    width: 50px;
+    height: 50px;
+  }
+  .footer .footer-content .social img {
+    width: 25px;
+  }
+}
+
+.footer .main-footer .part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .main-footer .part .part-title {
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+.footer .main-footer .part a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.footer .main-footer .logo-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .main-footer .logo-footer img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer .main-footer .copyright {
+  color: #FFF;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer .bg-top {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: -15%;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer .bg-bottom {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer .bg-top {
     top: -5%;
   }
 }
