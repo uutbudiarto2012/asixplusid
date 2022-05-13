@@ -7,6 +7,29 @@ body {
   background-position: left;
   background-color: #000;
   font-family: "Titillium Web", sans-serif;
+  scrollbar-width: thin;
+  /* "auto" or "thin" */
+  scrollbar-color: #682cce rgba(0, 0, 0, 0.5);
+  /* scroll thumb and track */
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #682cce;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #9e32e3;
+  /* creates padding around scroll thumb */
 }
 
 .asix-nav {
