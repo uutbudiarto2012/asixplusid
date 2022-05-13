@@ -17,20 +17,20 @@ const heroBG = document.querySelector(".hero .bg-hero");
 const heroContent = document.querySelector(".hero-content");
 const videoContent = document.querySelector(".video-content");
 const elRound = document.querySelector(".video-content .el-round");
-if (heroBG) {
-  window.addEventListener("scroll", function () {
-    const yValue = window.scrollY;
-    if (yValue > 70) {
-      asixNav.classList.add("isTop");
-      asixNav.style.padding = "10px 0";
-    } else {
-      asixNav.classList.remove("isTop");
-      asixNav.style.padding = "20px 0";
-    }
+window.addEventListener("scroll", function () {
+  const yValue = window.scrollY;
+  if (yValue > 70) {
+    asixNav.classList.add("isTop");
+    asixNav.style.padding = "10px 0";
+  } else {
+    asixNav.classList.remove("isTop");
+    asixNav.style.padding = "20px 0";
+  }
+  if (heroBG) {
     heroBG.style.top = yValue * 0.3 + "px";
     videoContent.style.top = -yValue * 0.1 + "px";
     elRound.style.top = yValue * 0.1 + "px";
     elRound.style.left = yValue * 0.3 + "px";
     // heroContent.style.top = yValue * 0.25 + 'px';
-  });
-}
+  }
+});
