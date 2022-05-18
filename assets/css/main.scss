@@ -631,12 +631,13 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     z-index: 10;
   }
-  .bg-bottom {
-    position: absolute;
-    object-fit: cover;
-    bottom: 0;
-    width: 100%;
-  }
+}
+
+.bg-top-footer {
+  position: absolute;
+  object-fit: cover;
+  bottom: 0;
+  width: 100%;
 }
 
 .section-title{
@@ -669,8 +670,10 @@ body::-webkit-scrollbar-thumb {
 }
 .gallery{
   padding-top: 10%;
+  padding-bottom: 10%;
   z-index: 20;
-  min-height: 100vh;
+  // min-height: 100vh;
+  position: relative;
   #particles-js{
     position: fixed;
     top: 0;
